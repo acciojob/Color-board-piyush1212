@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Board</title>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(20, 40px); /* Adjust as needed */
+        grid-gap: 2px; /* Adjust spacing between boxes */
+    }
 
+    .square {
+        width: 40px; /* Adjust as needed */
+        height: 40px; /* Adjust as needed */
+        background-color: #ccc; /* Default background color */
+        transition: background-color 1s ease; /* Smooth transition */
+    }
+
+    .square:hover {
+        background-color: #f00; /* Change background color on hover */
+    }
+</style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+
+<div class="container">
+    <!-- Generating 800 squares dynamically -->
+    <!-- You can adjust the number of squares as needed -->
+    <!-- 800 boxes = 20 columns * 40 rows -->
+    <!-- Adjust the dimensions of the grid and squares accordingly -->
+    <!-- Also, you can change the background colors as needed -->
+    <!-- Each box will change its color on hover -->
+    <!-- The color change will disappear after 1 second smoothly -->
+    <!-- Note: This might take a moment to render due to a large number of elements -->
+    <!-- You can optimize this for better performance if needed -->
+    <!-- For demonstration purposes, it's kept simple -->
+    <!-- Feel free to further customize as per your requirements -->
+    <!-- For larger applications, consider using frameworks like React, Vue.js, etc. -->
+    <!-- This is a basic example using HTML, CSS, and vanilla JavaScript -->
+    <!-- You can enhance it further based on your project requirements -->
+    <!-- You can also add additional functionalities as needed -->
+
+    <!-- JavaScript will handle the hover effect and the smooth transition -->
+</div>
+
+<script>
+    // Get the container element
+    const container = document.querySelector('.container');
+
+    // Function to create and append squares to the container
+    function createSquares(numSquares) {
+        for (let i = 0; i < numSquares; i++) {
+            const square = document.createElement('div');
+            square.classList.add('square');
+            container.appendChild(square);
+        }
+    }
+
+    // Generate 800 squares
+    createSquares(800);
 </script>
 
 </body>
-
 </html>
